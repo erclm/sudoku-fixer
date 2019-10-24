@@ -11,6 +11,11 @@ public class Subgrid extends Thread {
         solution = sudoku;
     }
 
+    public ArrayList<int[]> getErrors(){
+        return errors;
+    }
+
+
     @Override
     public void run() {
         for(int i = 0; i<9;i++){
@@ -25,17 +30,15 @@ public class Subgrid extends Thread {
             }
 
             for(int j = 0; j<9; j++){ //now checking grid[]
-                int n = j+1; //check 1~9
+                int n = j+1; //check 1 ~ 9
                 if(!IntStream.of(grid).anyMatch(num -> num == n)){
-                    int[] error = {i + 1, n};
+                    int[] error = {i, n}; //{grid number, missing number}
                     errors.add(error);
                 }
             }
         }
     }
 
-    public ArrayList<int[]> getErrors(){
-        return errors;
-    }
+
 }
 
