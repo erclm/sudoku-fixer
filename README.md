@@ -3,6 +3,7 @@ this application fixes sudoku grids
 
 ## usage
 `cd out/production/sudoku-fixer`
+
 `java im.ericl.sudoku.Main TEXT-FILE`
 
 ## example test file results
