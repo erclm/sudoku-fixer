@@ -1,17 +1,19 @@
 # sudoku-fixer
 this application fixes sudoku grids
 
-##usage
+## usage
 `java im.ericl.sudoku.Main TEXT-FILE`
 
-##example test reults
+## example test reults
+
 ![test1.txt & text2.txt & test3.txt](test123results.png)
 ![test4.txt & test5.txt](test45results.png)
 ![test6.txt](test6results.png)
 
-##how its made
 
-###Threads
+## how its made
+
+### Threads
 - Column checker thread
 - Row checker thread
 - Subgrid checker thread
